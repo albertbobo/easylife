@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EasyLife | 简居家具</title>
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="../styles/font-awesome.css">
+    <link rel="stylesheet" href="../styles/jquery.flipster.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <script src="../scripts/jquery-1.9.1.js"></script>
+    <script src="../scripts/bootstrap.js"></script>
+    <script src="../scripts/modernizr.js"></script>
+    <script src="../scripts/main.js"></script>
+</head>
+
+<body>
+<header>
+    <!--logo、登录注册、购物车-->
+    <div class="top">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.php">EasyLife</a>
+            </div>
+            <div class="reg">
+
+                <div class="dropdown-menu-right">
+                    <button type="button" class="dropdown-toggle" id="dropdownMenu1"
+                            data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </button>
+
+                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation" class="dropdown-header">Hi~</li>
+
+                        <?php if(isset($_SESSION['name'])){ ?>
+
+                        <li role="presentation" class="dropdown-header">
+
+                            <?php echo "{$_SESSION['name']}，欢迎来到EasyLife" ;?>
+
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <?php echo '<a href = "../php/reg.php?act=logout">退出</a>' ;?>
+                        </li>
+
+                        <?php } else { ?>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../php/login.php">请登录</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../php/signUp.php">免费注册</a>
+                        </li>
+
+                        <?php } ?>
+
+
+                    </ul>
+
+                </div>
+
+                <a href="#">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏、搜索框-->
+    <div class="container padding0">
+        <div class="htmleaf-container pos">
+            <div class="cd-main-header animate-search">
+                <div class="cd-main-nav-wrapper">
+                    <a href="#search" class="cd-search-trigger cd-text-replace"></a>
+                    <!--导航栏-->
+                    <nav class="animenu">
+                        <div class="animenu_bg">
+                            <button class="animenu__toggle">
+                                <span class="animenu__toggle__bar"></span>
+                                <span class="animenu__toggle__bar"></span>
+                                <span class="animenu__toggle__bar"></span>
+                            </button>
+                        </div>
+                        <ul id="Menu" class="animenu__nav">
+                            <li><a href="../index.php">首页</a></li>
+                            <li><a href="../php/sofa.php">沙发</a></li>
+                            <li><a href="../php/table.php">桌几</a></li>
+                            <li><a href="../php/chair.php">椅凳</a></li>
+                            <li><a href="../php/cabinet.php">橱柜</a></li>
+                            <li><a href="../php/bed.php" onclick="change_bg(this)" class="current">床榻</a></li>
+                            <li>
+                                <a href="">家居<span></span></a>
+                                <ul class="animenu__nav__child">
+                                    <li><a href="#">抱枕</a></li>
+                                    <li><a href="#">镜子</a></li>
+                                    <li><a href="#">收纳</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--导航栏-->
+                </div>
+                <a href="#" class="cd-nav-trigger cd-text-replace"></a>
+            </div>
+            <div id="search" class="cd-main-search">
+                <form>
+                    <input type="search" placeholder="搜索...">
+                </form>
+                <a href="#" class="close cd-text-replace"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!--banner区-->
+    <div class="col_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 padding0">
+                    <img src="../images/list_bed0.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--内容区-->
+    <div class="content">
+        <div class="container">
+            <div class="column">
+                <!--栏目标题-->
+                <div class="col_title">
+                    <p><span>/ /</span>床榻<span>/ /</span></p>
+                    <i></i>
+                </div>
+
+                <!--商品展示-->
+                <ul class="row">
+                    <li class="col-xs-6 col-sm-6 col-md-3 img_pad">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<!--版权区-->
+<footer>
+    <!--电脑/平板设备-->
+    <div class="copyright01">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <dl>
+                        <dt>家具分类</dt>
+                        <dd>
+                            <a href="../php/sofa.php">沙发</a>
+                            <a href="../php/table.php">桌几</a>
+                            <a href="../php/chair.php">椅凳</a>
+                            <a href="../php/cabinet.php">橱柜</a>
+                            <a href="../php/bed.php">床榻</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <dl>
+                        <dt>工艺制作</dt>
+                        <dd>
+                            <a href="#">布艺</a>
+                            <a href="#">橡木</a>
+                            <a href="#">楸木</a>
+                            <a href="#">胡桃木</a>
+                            <a href="#">水曲柳木</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <dl>
+                        <dt>免费配送</dt>
+                        <dd>
+                            <a href="#">北京</a>
+                            <a href="#">上海</a>
+                            <a href="#">浙江</a>
+                            <a href="#">江苏</a>
+                            <a href="#">广东</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <dl>
+                        <dt>品牌故事</dt>
+                        <dd>
+                            <a href="#">艺术总监</a>
+                            <a href="#">传承与相遇</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <dl>
+                        <dt>最新消息</dt>
+                        <dd>
+                            <a href="#">媒体报道</a>
+                            <a href="#">获奖荣誉</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd>
+                            <a class="contactWay" href="#"><span class="fa fa-phone"></span>020-8464586</a>
+                            <a class="contactWay" href="#"><span class="fa fa-at"></span>EL@126.com</a>
+                            <a class="contactWay" href="#"><span class="fa fa-weibo"></span>EasyLife简居</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--手机等小设备-->
+    <div class="copyright02">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 padding0">
+                    <aside class="accordion">
+                        <h1>家具分类<span class="fa fa-list-ul"></span></h1>
+
+                        <div>
+                            <a href="../php/sofa.php"><h2>沙发</h2></a>
+                            <a href="../php/table.php"><h2>桌几</h2></a>
+                            <a href="../php/chair.php"><h2>椅凳</h2></a>
+                            <a href="../php/cabinet.php"><h2>橱柜</h2></a>
+                            <a href="../php/bed.php"><h2>床榻</h2></a>
+                        </div>
+
+                        <h1>工艺制作<span class="fa fa-list-ul"></span></h1>
+
+                        <div>
+                            <a href="#"><h2>布艺</h2></a>
+                            <a href="#"><h2>橡木</h2></a>
+                            <a href="#"><h2>楸木</h2></a>
+                            <a href="#"><h2>胡桃木</h2></a>
+                            <a href="#"><h2>水曲柳木</h2></a>
+                        </div>
+
+                        <h1>免费配送<span class="fa fa-list-ul"></span></h1>
+
+                        <div>
+                            <a href="#"><h2>北京</h2></a>
+                            <a href="#"><h2>上海</h2></a>
+                            <a href="#"><h2>浙江</h2></a>
+                            <a href="#"><h2>江苏</h2></a>
+                            <a href="#"><h2>广东</h2></a>
+                        </div>
+
+                        <h1>品牌故事<span class="fa fa-list-ul"></span></h1>
+
+                        <div>
+                            <a href="#"><h2>艺术总监</h2></a>
+                            <a href="#"><h2>传承与相遇</h2></a>
+                        </div>
+
+                        <h1>最新消息<span class="fa fa-list-ul"></span></h1>
+
+                        <div>
+                            <a href="#"><h2>媒体报道</h2></a>
+                            <a href="#"><h2>获奖荣誉</h2></a>
+                        </div>
+
+                        <h1>联系我们<span class="fa fa-list-ul"></span></h1>
+
+                        <div>
+                            <a href="#"><h2><span class="fa fa-phone"></span>&nbsp;&nbsp;&nbsp;020-8464586</h2></a>
+                            <a href="#"><h2><span class="fa fa-at"></span>&nbsp;&nbsp;&nbsp;EL@126.com</h2></a>
+                            <a href="#"><h2><span class="fa fa-weibo"></span>&nbsp;&nbsp;&nbsp;EasyLife简居</h2></a>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="records">
+                    <p class="logo2">EasyLife</p>
+
+                    <p><a href="#">粤ICP备15021828号-1 法律声明</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!--回到顶部-->
+<div>
+    <a class="cd-top">Top</a>
+</div>
+
+<!--下拉菜单-->
+<script type="text/javascript">
+    (function () {
+        var animenuToggle = document.querySelector('.animenu__toggle'),
+                animenuNav = document.querySelector('.animenu__nav'),
+                hasClass = function (elem, className) {
+                    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+                },
+                toggleClass = function (elem, className) {
+                    var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+                    if (hasClass(elem, className)) {
+                        while (newClass.indexOf(' ' + className + ' ') >= 0) {
+                            newClass = newClass.replace(' ' + className + ' ', ' ');
+                        }
+                        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+                    } else {
+                        elem.className += ' ' + className;
+                    }
+                },
+                animenuToggleNav = function () {
+                    toggleClass(animenuToggle, "animenu__toggle--active");
+                    toggleClass(animenuNav, "animenu__nav--open");
+                };
+
+        if (!animenuToggle.addEventListener) {
+            animenuToggle.attachEvent("onclick", animenuToggleNav);
+        }
+        else {
+            animenuToggle.addEventListener('click', animenuToggleNav);
+        }
+    })()
+</script>
+
+<script src="../scripts/jquery-1.9.1.js"></script>
+<script src="../scripts/jquery.flipster.js"></script>
+<script src="../scripts/copyright.js"></script>
+
+
+</body>
+</html>
+

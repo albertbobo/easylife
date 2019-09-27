@@ -1,0 +1,50 @@
+<!-- $Id: category_list.htm 17019 2010-01-29 10:10:34Z liuhui $ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ESHOP 管理中心 - 商品分类 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="styles/general.css" rel="stylesheet" type="text/css" />
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="table_add.php">信息修改</a></span>
+<span class="action-span1"><a href="">ITCAST-SHOP 管理中心</a> </span><span id="search_id" class="action-span1"> - 信息修改 </span>
+<div style="clear:both"></div>
+</h1>
+
+<form method="post" action="table_goods.php?act=update" name="listForm">
+  <input type="hidden" name="id" value="<?php echo $id;?>" />
+  <div class="list-div" id="listDiv">
+
+  <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品图片</th>
+    </tr>
+
+  	<tr> 
+  		<td><input type='text' name='table_name' maxlength="30" value='<?php echo $result['table_name'];?>' size='27' /></td>
+  		<td><input type='text' name='table_price' value='<?php echo $result['table_price'];?>' maxlength="50" size='27' /></td>
+  		<td><input type='text' name='table_img' value='<?php echo $result['table_img'];?>' maxlength="50" size='27' /></td>
+  	</tr>
+
+    <tr> 
+      <td colspan="3"><input type='submit' name='submit' maxlength="20" value='提交修改' size='27' /></td>
+    </tr>
+    </table>
+
+  </div>
+</form>
+
+
+<div id="footer"></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+.loginIt {
+    margin: 5% 0 3% 0;
+}
+
+.logoImg {
+    display: block;
+    margin: 2em auto 3em auto;
+    text-align: center;
+}
+@font-face {
+    font-family: 'awesome';
+    src: url("../fonts/fontawesome-webfont.ttf");
+}
+[class^="icon-"]:before {
+    display: inline-block;
+    font-family: 'awesome';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    color: #262e3e;
+    text-decoration: inherit;
+}
+.icon-user:before {
+    content: "\f007";
+}
+.icon-lock:before {
+    content: "\f023";
+}
+.icon-email:before {
+    content: '\f0e0';
+}
+.form-group-addon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.getPwd a {
+    color: rgba(0,0,0,.25);
+    font-size: 14px;
+}
+.form-control {
+    height: 40px;
+    background: rgba(0,0,0,.3);
+    color: #262e3e;
+    border: none;
+    padding: 6px 50px;
+    border-radius: 0;
+}
+.btn {
+    border-radius: 0;
+}
+
+.form-control::-moz-placeholder {
+    color: #fff;
+    opacity: .7;
+}
+.form-control:focus {
+    color: #262e3e;
+    border-color: #262e3e;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(38, 46, 62, .5);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(38, 46, 62, .5);
+}
+.getPwd a {
+    text-decoration: underline;
+    padding-left: 2px;
+    transition: color .35s;
+}
+.getPwd a:hover {
+    text-decoration: underline;
+    color: #262e3e;
+}
+.btn-default {
+    height: 40px;
+    color: #fff;
+    background-color: #262e3e;
+    font-size: 16px;
+    margin-top: 1.5em;
+    border: 1px solid #262e3e;
+    transition: all .5s;
+}
+
+.btn-default:hover,.btn-default:focus,.btn-default:active:focus {
+    color: rgba(38, 46, 62, 0.6);
+    background-color: #65707f;
+    border: 1px solid #65707f;
+}
+
+.btn-default:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+.btn-default[disabled]:hover {
+    color: #666;
+}
+.regBtn {
+    display: block;
+    width: 100%;
+    height: 38px;
+    background-color: transparent;
+    color: #262e3e;
+    border: 1px solid #262e3e;
+    font-size: 16px;
+    border-radius: 0;
+    transition: all .5s;
+}
+.regBtn:hover {
+    color: #fff;
+    background-color: #262e3e;
+}
+.otherReg {
+    margin: 3em auto;
+    width: 100%;
+    text-align: center;
+}
+.regLine-l,.regLine-r {
+    display: inline-block;
+    width: 20%;
+    border-bottom: 1px solid #65707f;
+    margin: 4px 0;
+}
+.regF {
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    color: #65707f;
+}
+.regIcon {
+    width: 80%;
+    margin: 0 auto 1.5em auto;
+    text-align: center;
+}
+.regIcon a {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: opacity .35s;
+}
+
+.regIcon a:hover {
+    opacity: .6;
+}
+
+[id^="icon-"]:before {
+    display: inline-block;
+    font-family: 'awesome';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 26px;
+    text-decoration: inherit;
+    padding: .35em;
+    border-radius: 50%;
+}
+#icon-weibo:before {
+    content: "\f18a";
+    color: #cf0000;
+    border: 1px solid #cf0000;
+}
+#icon-wechat:before {
+    content: "\f1d7";
+    color: #029f10;
+    border: 1px solid #029f10;
+}
+#icon-qq:before {
+    content: "\f1d6";
+    color: #009eff;
+    border: 1px solid #009eff;
+}
+.goLog {
+    margin: 1.5em auto;
+}
+.agree {
+    display: none;
+}
+.agree + label {
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    color: #65707f;
+    border: 1px solid #65707f;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    display: inline-block;
+    position: relative;
+    margin: 0 4px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+.readIt {
+    color: #65707f;
+    font-size: 13px;
+    padding-right: .5em;
+}
+.agree:checked + label {
+    background-color: transparent;
+    border: 1px solid #65707f;
+    color: #65707f;
+    font-size: 13px;
+}
+.agree:checked + label:after {
+    content: '\2714';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    color: #65707f;
+    text-align: center;
+    font-size: 15px;
+    transition: color .3s;
+}
+.agree:checked + label:hover::after {
+    color: #262e3e;
+}
+.agreeA {
+    text-decoration: underline;
+    color: #65707f;
+    font-size: 13px;
+    transition: color .35s;
+}
+.agreeA:hover {
+    text-decoration: underline;
+    color: #262e3e;
+}
+.has-feedback label ~ .form-control-feedback {
+    top: 4px;
+}
+.help-block {
+    font-size: 120%;
+}
+
